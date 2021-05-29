@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hp-configurator/static/css/main.b8dc1609.chunk.css",
+    "main.css": "/hp-configurator/static/css/main.9a9d2d11.chunk.css",
     "main.js": "/hp-configurator/static/js/main.9cdc89d9.chunk.js",
     "main.js.map": "/hp-configurator/static/js/main.9cdc89d9.chunk.js.map",
     "runtime-main.js": "/hp-configurator/static/js/runtime-main.d4551eec.js",
@@ -10,7 +10,7 @@
     "static/js/3.efd299b8.chunk.js": "/hp-configurator/static/js/3.efd299b8.chunk.js",
     "static/js/3.efd299b8.chunk.js.map": "/hp-configurator/static/js/3.efd299b8.chunk.js.map",
     "index.html": "/hp-configurator/index.html",
-    "static/css/main.b8dc1609.chunk.css.map": "/hp-configurator/static/css/main.b8dc1609.chunk.css.map",
+    "static/css/main.9a9d2d11.chunk.css.map": "/hp-configurator/static/css/main.9a9d2d11.chunk.css.map",
     "static/js/2.6107ff8b.chunk.js.LICENSE.txt": "/hp-configurator/static/js/2.6107ff8b.chunk.js.LICENSE.txt",
     "static/media/Front.d6f86f2e.jpg": "/hp-configurator/static/media/Front.d6f86f2e.jpg",
     "static/media/FrontRight.c5051074.jpg": "/hp-configurator/static/media/FrontRight.c5051074.jpg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.d4551eec.js",
     "static/js/2.6107ff8b.chunk.js",
-    "static/css/main.b8dc1609.chunk.css",
+    "static/css/main.9a9d2d11.chunk.css",
     "static/js/main.9cdc89d9.chunk.js"
   ]
 }
