@@ -1,6 +1,7 @@
+@media screen and (min-width: 900px) {
 .sceneButtons{
-    margin: 70px 20% 5% 40%;
-    height: 50px;
+    margin: 8% 20% 5% 35%;
+    height: 5%;
     width: 25%;
     display: flex;
     flex-direction: row;
@@ -8,15 +9,40 @@
     justify-content: space-between;
 }
 .circleButtonSelected{
-    height: 30px;
-    width: 30px;
+    height: 42%;
+    width: 10%;
     background: #757373;
     border-radius: 30px;
 }
 .circleButton{
-    height: 28px;
+    height: 35%;
     cursor: pointer;
-    width: 28px;
+    width: 8%;
     border: 1px solid #757373;
-    border-radius: 30px;
+    border-radius: 200px;
+}
+}
+@media screen and (max-width: 899px) {
+    .sceneButtons{
+        margin: 35% 20% 5% 25%;
+        height: 5%;
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .circleButtonSelected{
+        height: 42%;
+        width: 10%;
+        background: #757373;
+        border-radius: 30px;
+    }
+    .circleButton{
+        height: 35%;
+        cursor: pointer;
+        width: 8%;
+        border: 1px solid #757373;
+        border-radius: 200px;
+    }
 }

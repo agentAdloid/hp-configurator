@@ -14,13 +14,13 @@ const Features = (props) =>{
         );
     let Featurelist =(
         <div className="exploreList">
-                <div className="listsTag" onClick={props.slide}>
+                <div className="listsTagExplore" onClick={props.slide}>
                     <p>Slide</p>
                 </div>
-                <div className="listsTag" onClick={props.tilt}>
+                <div className="listsTagExplore" onClick={props.tilt}>
                     <p>Tilt</p>
                 </div>
-                <div className="listsTag" onClick={props.showPorts}>
+                <div className="listsTagExplore" onClick={props.showPorts}>
                     <p>Ports</p>
                 </div>
             </div>
