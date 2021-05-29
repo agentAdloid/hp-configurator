@@ -1,0 +1,56 @@
+.sidePanel{
+    background: #dbd9d9;
+    align-items: center;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    opacity: 1;
+    width: 50%;
+    transition: opacity 10s ease-out; 
+    transition: width 0.5s; 
+}
+.sidePanelHide{
+    width: 0%;
+    opacity: 0.5;
+}
+.tag{
+    display: flex;
+    flex-direction: row;
+    height: 7%;
+    width: 100%;
+    box-shadow: 5px 5px 5px 0px #000000;
+}
+.tag img{
+    width: 45px;
+    height: 45px;
+    margin: 15px 5px 0px 15px;
+}
+.tag p{
+    margin-top: 25px;
+    font-family: 'HpSimplified';
+    font-size: 19px;
+    font-weight: 400;
+    margin-left: 22%;
+}
+.lowerSidePanel{
+    position: relative;
+    height: 93%;
+    width: 100%;
+    background: #dbd9d9;
+}
+.sidePanelToggler{
+    position: relative;
+    top: 85%;
+    left: 0%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0% 70% 70% 0%;
+    width: 20px;
+    height: 7%;
+    cursor: pointer;
+    background: #dbd9d9;
+}
+.arrow{
+    margin-top: 100%;
+    color: rgb(128, 126, 126);
+}

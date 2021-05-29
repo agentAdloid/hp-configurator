@@ -1,0 +1,11 @@
+.sceneContainer{
+    background: white;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.sceneContainer img{
+    width: 700px;
+    height: 600px;
+    margin-top: 200px;
+}
