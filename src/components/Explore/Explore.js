@@ -33,7 +33,9 @@ const Features = (props) =>{
             <div className="exploreTag" onClick={()=>{
             setlistShow(!listShow);
         }}>     
-                {Icon}
+                <div className="iconDiv">
+                  {Icon}
+                </div>
                 <p>Explore</p>
             </div>
             { Featurelist}

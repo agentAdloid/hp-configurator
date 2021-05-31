@@ -2,9 +2,12 @@ import React from "react";
 import "./SceneButtons.css";
 
 class SceneButton extends React.Component {
+  state={
+    selected: 0
+  }
   render() {
     let cl = ["", "", "", "", "", ""];
-    switch (this.props.selected) {
+    switch (this.state.selected) {
       case 1:
         cl[1] = "Selected";
         break;
@@ -24,35 +27,40 @@ class SceneButton extends React.Component {
         break;
     }
     return (
-      <div className="sceneButtons">
+      <div className={this.props.className}>
         <div
           className={"circleButton" + cl[1]}
           onClick={() => {
-            this.props.first();
+            this.setState({selected:1});
+            this.props.showFirstImg();
           }}
         ></div>
         <div
           className={"circleButton" + cl[2]}
           onClick={() => {
-            this.props.second();
+            this.setState({selected:2});
+            this.props.showSecondImg();
           }}
         ></div>
         <div
           className={"circleButton" + cl[3]}
           onClick={() => {
-            this.props.third();
+            this.setState({selected:3});
+            this.props.showThirdImg();
           }}
         ></div>
         <div
           className={"circleButton" + cl[4]}
           onClick={() => {
-            this.props.fourth();
+            this.setState({selected:4});
+            this.props.showFourthImg();
           }}
         ></div>
         <div
           className={"circleButton" + cl[5]}
           onClick={() => {
-            this.props.fifth();
+            this.setState({selected:5});
+            this.props.showFifthImg();
           }}
         ></div>
       </div>

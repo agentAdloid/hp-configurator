@@ -31,9 +31,11 @@ const Features = (props) => {
         onClick={() => {
           setlistShow(!listShow);
         }}
-      >
-         {Icon}
-        <p>Features</p>
+      > 
+      <div className="iconDiv">
+          {Icon}
+      </div>
+      <p>Features</p>
       </div>
       {Featurelist}
     </div>
