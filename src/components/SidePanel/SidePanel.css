@@ -125,11 +125,11 @@
         height: 40px;
         border-radius: 40px;
         top: 5px;
-        left: 10px;
+        left: 6px;
     }
     .tag p{
         font-family: 'HpSimplified';
-        font-size: 15px;
+        font-size: 13px;
         padding-top: 5px;
         font-weight: 300;
     }
@@ -211,7 +211,7 @@
             height: 40px;
             border-radius: 40px;
             top: 5px;
-            left: 10px;
+            left: 5px;
         }
         .tag p{
             font-family: 'HpSimplified';
@@ -220,7 +220,7 @@
         }
         .sidePanelToggler{
             position: absolute;
-            bottom: 42%;
+            bottom: 44%;
             align-items: center;
             justify-content: center;
             border-radius: 30% 30% 10% 0%;
