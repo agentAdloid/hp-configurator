@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hp-configurator/static/css/main.b7b8670f.chunk.css",
+    "main.css": "/hp-configurator/static/css/main.b002e2e5.chunk.css",
     "main.js": "/hp-configurator/static/js/main.404dcc5a.chunk.js",
     "main.js.map": "/hp-configurator/static/js/main.404dcc5a.chunk.js.map",
     "runtime-main.js": "/hp-configurator/static/js/runtime-main.d4551eec.js",
@@ -10,13 +10,13 @@
     "static/js/3.efd299b8.chunk.js": "/hp-configurator/static/js/3.efd299b8.chunk.js",
     "static/js/3.efd299b8.chunk.js.map": "/hp-configurator/static/js/3.efd299b8.chunk.js.map",
     "index.html": "/hp-configurator/index.html",
-    "static/css/main.b7b8670f.chunk.css.map": "/hp-configurator/static/css/main.b7b8670f.chunk.css.map",
+    "static/css/main.b002e2e5.chunk.css.map": "/hp-configurator/static/css/main.b002e2e5.chunk.css.map",
     "static/js/2.12584f1d.chunk.js.LICENSE.txt": "/hp-configurator/static/js/2.12584f1d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d4551eec.js",
     "static/js/2.12584f1d.chunk.js",
-    "static/css/main.b7b8670f.chunk.css",
+    "static/css/main.b002e2e5.chunk.css",
     "static/js/main.404dcc5a.chunk.js"
   ]
 }
