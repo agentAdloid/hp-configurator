@@ -1,248 +1,425 @@
+.logo-gl {
+  width: 45px;
+  position: absolute;
+  height: 45px;
+  left: 0;
+  top: 2px;
+  border-radius: 40px;
+  z-index: -1;
+  margin: 10px 5px;
+}
+
 @media screen and (min-width: 900px) {
-
-.sidePanel{
-    align-items: center;
-    text-align: center;
-    display: block;
-    overflow: hidden;
-    position: absolute;
-    opacity: 1;
-    top : 40px;
-    height: 95vh;
-    z-index: 1;
-    width: 40%;
-    background: #dbd9d9;
-    transition: opacity 10s ease-out; 
-    transition: width 0.5s; 
-}
-
-.tag{
-    align-items: center;
-    text-align: center;
-    display: block;
-    overflow: hidden;
-    position: absolute;
-    opacity: 1;
-    height: 55px;
-    z-index: 2;
-    width: 40%;
-    background: #dbd9d9;
-    box-shadow: 5px 5px 5px 0px #000000;
-    transition: opacity 10s ease-out; 
-    transition: width 0.5s; 
-}
-.sidePanelHide{
-    width: 0%;
-    opacity: 0.5;
-}
-.tag img{
+  .logo {
     width: 45px;
     position: absolute;
     height: 45px;
+    left: 0;
+    top: 2px;
     border-radius: 40px;
-    top: 5px;
-    left: 15px;
-}
-.tag p{
-    font-family: 'HpSimplified';
-    font-size: 19px;
-    font-weight: 400;
-}
-.lowerSidePanel{
+    z-index: 100;
+    margin: 10px 5px;
+  }
+  .alert-enter {
+    opacity: 1;
+    transform: translateX(-33vw);
+  }
+  .alert-enter-active {
+    opacity: 1;
+    transform: translateX(0vw);
+    transition: transform 1000ms ease-in-out;
+  }
+  .alert-exit {
+    opacity: 1;
+  }
+  .alert-exit-active {
+    opacity: 1;
+    transform: translateX(-33vw);
+    transition: transform 1000ms ease-in-out;
+  }
+  .toggler-enter {
+    opacity: 1;
+    transform: translateX(-33vw);
+  }
+  .toggler-enter-active {
+    opacity: 1;
+    transform: translateX(0vw);
+    transition: transform 1000ms ease-in-out;
+  }
+  .toggler-exit {
+    opacity: 1;
+    transform: translateX(33vw);
+  }
+  .toggler-exit-active {
+    opacity: 1;
+    transform: translateX(0vw);
+    transition: transform 1000ms ease-in-out;
+  }
+
+  .sidePanel {
+    align-items: center;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    opacity: 1;
+    top: 65px;
+    height: 93vh;
+    z-index: 1;
+    width: 33vw;
+    background: #dcdcdc;
+  }
+  .gradient {
     position: relative;
-    height: 100%;
     width: 100%;
-    background: #dbd9d9;
-}
-.sidePanelToggler{
+    height: 10px;
+  }
+  .tagContainer {
+    opacity: 1;
+    height: 67px;
+    z-index: 2;
+    width: 33vw;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    background: #dcdcdc;
+  }
+  .tag {
+    align-items: center;
+    text-align: center;
+    margin-left: 60px;
+  }
+  .tag p {
+    font-family: "HpSimplified";
+    font-size: 19px;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-left: auto;
+  }
+  .sidePanelToggler {
     position: absolute;
     bottom: 50px;
-    left: 0%;
+    left: 32.55vw;
     align-items: center;
     justify-content: center;
-    border-radius: 0% 10% 10% 0%;
-    width: 42%;
-    height: 60px;
+    width: 40px;
     cursor: pointer;
-    background: #dbd9d9;
-    transition: opacity 10s ease-out; 
-    transition: width 0.5s; 
     z-index: 2;
-}
-.togglerLeft{
-    width: 2%;
-    opacity: 1;
-}
-.arrow{
+  }
+  .togglerLeft {
+    left: -0.5vw;
+  }
+  .arrow {
     position: absolute;
     right: 0px;
     top: 20px;
     color: rgb(128, 126, 126);
+  }
+  .share-div {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .share {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
 }
-}
-
 
 @media screen and (max-width: 899px) and (min-width: 700px) {
+  .logo {
+    width: 45px;
+    position: absolute;
+    height: 45px;
+    left: 0;
+    top: 2px;
+    border-radius: 40px;
+    z-index: 100;
+    margin: 10px 5px;
+  }
+  .alert-enter {
+    opacity: 1;
+    transform: translateX(-33vw);
+  }
+  .alert-enter-active {
+    opacity: 1;
+    transform: translateX(0vw);
+    transition: transform 1000ms ease-in-out;
+  }
+  .alert-exit {
+    opacity: 1;
+  }
+  .alert-exit-active {
+    opacity: 1;
+    transform: translateX(-33vw);
+    transition: transform 1000ms ease-in-out;
+  }
+  .toggler-enter {
+    opacity: 1;
+    transform: translateX(-33vw);
+  }
+  .toggler-enter-active {
+    opacity: 1;
+    transform: translateX(0vw);
+    transition: transform 1000ms ease-in-out;
+  }
+  .toggler-exit {
+    opacity: 1;
+    transform: translateX(33vw);
+  }
+  .toggler-exit-active {
+    opacity: 1;
+    transform: translateX(0vw);
+    transition: transform 1000ms ease-in-out;
+  }
 
-    .sidePanel{
-        align-items: center;
-        text-align: center;
-        display: block;
-        overflow: hidden;
-        position: absolute;
-        opacity: 1;
-        top : 40px;
-        height: 95vh;
-        z-index: 1;
-        width: 40%;
-        background: #dbd9d9;
-        transition: opacity 10s ease-out; 
-        transition: width 0.5s; 
-    }
-    
-    .tag{
-        align-items: center;
-        text-align: center;
-        display: block;
-        overflow: hidden;
-        position: absolute;
-        opacity: 1;
-        height: 55px;
-        z-index: 2;
-        width: 40%;
-        background: #dbd9d9;
-        box-shadow: 5px 5px 5px 0px #000000;
-        transition: opacity 10s ease-out; 
-        transition: width 0.5s; 
-    }
-    .sidePanelHide{
-        width: 0%;
-        opacity: 0.5;
-    }
-    .tag img{
-        width: 40px;
-        position: absolute;
-        height: 40px;
-        border-radius: 40px;
-        top: 5px;
-        left: 6px;
-    }
-    .tag p{
-        font-family: 'HpSimplified';
-        font-size: 13px;
-        padding-top: 5px;
-        font-weight: 300;
-    }
-    .lowerSidePanel{
-        position: relative;
-        height: 100%;
-        width: 100%;
-        background: #dbd9d9;
-    }
-    .sidePanelToggler{
-        position: absolute;
-        bottom: 50px;
-        left: 0%;
-        align-items: center;
-        justify-content: center;
-        border-radius: 0% 10% 10% 0%;
-        width: 42%;
-        height: 60px;
-        cursor: pointer;
-        background: #dbd9d9;
-        transition: opacity 10s ease-out; 
-        transition: width 0.5s; 
-        z-index: 2;
-    }
-    .togglerLeft{
-        width: 2%;
-        opacity: 1;
-    }
-    .arrow{
-        position: absolute;
-        right: 0px;
-        top: 20px;
-        color: rgb(128, 126, 126);
-    }
-    }
-    
-    @media screen and (max-width: 699px){
+  .sidePanel {
+    align-items: center;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    opacity: 1;
+    top: 65px;
+    z-index: 1;
+    width: 33vw;
+    height: 93vh;
+    background: #dcdcdc;
+  }
+  .gradient {
+    position: relative;
+    width: 100%;
+    height: 10px;
+  }
+  .tagContainer {
+    opacity: 1;
+    height: 67px;
+    z-index: 2;
+    width: 33vw;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    background: #dcdcdc;
+  }
+  .tag {
+    align-items: center;
+    text-align: center;
+    margin-left: 60px;
+  }
+  .tag p {
+    font-family: "HpSimplified";
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-left: auto;
+  }
+  .sidePanelToggler {
+    position: absolute;
+    bottom: 50px;
+    left: 32.55vw;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .togglerLeft {
+    left: -0.5vw;
+  }
+  .arrow {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    color: rgb(128, 126, 126);
+  }
+  .share-div {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .share {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
 
-        .sidePanel{
-            align-items: center;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            opacity: 1;
-            bottom: 0vh;
-            height: 40vh;
-            z-index: 1;
-            width: 100%;
-            background: #dbd9d9;
-            transition: opacity 10s ease-out; 
-            transition: width 0.5s; 
-            overflow-x: scroll;
-        }
-        
-        .tag{
-            align-items: center;
-            text-align: center;
-            display: block;
-            overflow: hidden;
-            position: absolute;
-            opacity: 1;
-            bottom: 40vh;
-            height: 50px;
-            z-index: 2;
-            width: 100%;
-            background: #dbd9d9;
-            box-shadow: 5px 5px 5px 0px #000000;
-            transition: opacity 10s ease-out; 
-            transition: height 0.5s; 
-        }
-        .sidePanelHide{
-            height: 0%;
-            opacity: 0;
-        }
-        .tag img{
-            width: 40px;
-            position: absolute;
-            height: 40px;
-            border-radius: 40px;
-            top: 5px;
-            left: 5px;
-        }
-        .tag p{
-            font-family: 'HpSimplified';
-            font-size: 19px;
-            font-weight: 500;
-        }
-        .sidePanelToggler{
-            position: absolute;
-            bottom: 44%;
-            align-items: center;
-            justify-content: center;
-            border-radius: 30% 30% 10% 0%;
-            width: 50px;
-            right: 0.5%;
-            height: 70px;
-            cursor: pointer;
-            background: #dbd9d9;
-            transition: opacity 10s ease-out; 
-            transition: height 0.2s; 
-            z-index: 10;
-        }
-        .togglerLeft{
-            height: 35px;
-            bottom: 0%;
-            opacity: 1;
-        }
-        .arrow{
-            position: absolute;
-            top: 3px;
-            left: 17px;
-            color: rgb(128, 126, 126);
-        }
-    }
-        
+@media screen and (max-width: 699px) {
+  .logo {
+    display: none;
+  }
+  .sidePanel {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    opacity: 1;
+    bottom: 0vh;
+    height: 40vh;
+    z-index: 1;
+    width: 100%;
+    background: #dcdcdc;
+  }
+
+  .tag {
+    align-items: center;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    opacity: 1;
+    height: 50px;
+    z-index: 2;
+    width: 100%;
+    background: #dcdcdc;
+  }
+  .sidePanelHide {
+    height: 0%;
+    opacity: 0;
+  }
+  .tag img {
+    width: 40px;
+    position: absolute;
+    height: 40px;
+    border-radius: 40px;
+    top: 5px;
+    left: 5px;
+  }
+  .tag p {
+    font-family: "HpSimplified";
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .sidePanelToggler {
+    position: absolute;
+    bottom: 40%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30% 30% 10% 0%;
+    width: 40px;
+    right: 3%;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .togglerLeft {
+    height: 35px;
+    bottom: 10%;
+    opacity: 1;
+  }
+  .arrow {
+    position: absolute;
+    top: 3px;
+    left: 17px;
+    color: rgb(128, 126, 126);
+  }
+  .share-div {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .share {
+    height: 40px;
+    width: 40px;
+    margin-left: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+  }
+  .patch{
+      height: 15vh;
+      width: 100vw;
+      background: white;
+  }
+  .gradient {
+    width: 100%;
+    height: 10px;
+  }
+  .patchContainer{
+    z-index: -1;
+    width: 100%;
+  }
+  .patchContainerDifn{
+    position: absolute;
+    left:0;
+    z-index: -1;
+    bottom: 3vh;
+    width: 100%;
+  }
+  .alert-enter {
+    opacity: 1;
+    transform: translateY(41vh);
+  }
+  .alert-enter-active {
+    opacity: 1;
+    transform: translateY(0vh);
+    transition: transform 1000ms ease-in-out;
+  }
+  .alert-exit {
+    opacity: 1;
+    transform: translateY(-41vh);
+  }
+  .alert-exit-active {
+    opacity: 1;
+    transform: translateY(0vh);
+    transition: transform 1000ms ease-in-out;
+  }
+  .patch-enter {
+    opacity: 1;
+    transform: translateY(36vh);
+  }
+  .patch-enter-active {
+    opacity: 1;
+    transform: translateY(0vh);
+    transition: transform 1000ms ease-in-out;
+  }
+  .patch-exit {
+    opacity: 1;
+    transform: translateY(-36vh);
+  }
+  .patch-exit-active {
+    opacity: 1;
+    transform: translateY(0vh);
+    transition: transform 1000ms ease-in-out;
+  }
+  .info-div{
+      position: absolute;
+      bottom: 0vw;
+      left: 0vw;
+      width: 100%;
+      height: 50vh;
+      background: #dcdcdc;
+  }
+  .info-div-low{
+    position: absolute;
+    bottom: -41vh;
+    left: 0vw;
+    width: 100%;
+    height: 50vh;
+  }
+  .internal{
+      position: relative;
+  }
+  .internal2{
+      position: absolute;
+  }
+}

@@ -1,61 +1,211 @@
 import React from "react";
 import "./SidePanel.css";
-import logo from "../../assets/logo192.png";
 import Features from "../../components/Features/Features";
 import Explore from "../../components/Explore/Explore";
 import Aux from "../../hoc/Aux";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import SceneButtons from "../../components/SceneButtons/SceneButtons";
+import { CSSTransition } from "react-transition-group";
+import rightImg from "../../assets/EXTED_PATCH_0.png";
+import leftImg from "../../assets/EXTED_PATCH_01.png";
+import Gradient from "../../assets/GRADIANT.png";
+import shareImg from "../../assets/share.svg";
+import reSize from "../../assets/RESIZE_OFF.svg";
+import reSet from "../../assets/reset.png";
+import logo from "../../assets/logo.svg";
+import PATCH from "../../assets/PATCH.svg";
+import downArrow from "../../assets/downarrow.svg";
+import upArrow from "../../assets/uparrow.svg";
 class SidePanel extends React.Component {
   state = {
     show: true,
+    ExploreListShow: false,
+    mobileView: false,
   };
-  render() {
+  constructor(props) {
+    super(props);
+    if (window.innerWidth <= 699) this.state.mobileView = true;
+  }
+  componentDidMount() {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 699) this.setState({ mobileView: true });
+      else this.setState({ mobileView: false });
+    });
+  }
+  onShareClick
+  createMobileView = () => {
     let Icon = <ArrowBackIosIcon className="arrow" />;
     if (!this.state.show) {
       Icon = <ArrowForwardIosIcon className="arrow" />;
     }
-    let classname = "sidePanel";
-    let tagClassname = "tag";
     let togglerClass = "sidePanelToggler";
-    let sceneClass = "sceneButtons";
-    if (!this.state.show) 
-    {  classname = classname + " sidePanelHide";
-       tagClassname = tagClassname + " sidePanelHide";
-       togglerClass = togglerClass+ " togglerLeft"
-       sceneClass = "sceneButtons-difn-pos";
+    let sceneClass = "sceneButtonsContainer";
+    let imgArrow = downArrow;
+    let info = "info-div";
+    let patchClass = "patchContainer";
+    if (!this.state.show) {
+      togglerClass = togglerClass + " togglerLeft";
+      sceneClass = "sceneButtons-difn-pos";
+      imgArrow = upArrow;
+      info = "info-div-low";
+      patchClass = "patchContainerDifn";
     }
+
     return (
       <Aux>
-        <div className={tagClassname} >
-          <img alt="" src={logo} />
-          <p>OMEN 27i Gaming Monitor</p>
-        </div>
-        <div className={classname}>
-          <Explore
-            slide={this.props.slide}
-            showPorts={this.props.showPorts}
-            tilt={this.props.tilt}
-          />
-          <Features showGsyncTech={this.props.showGsyncTech} />
-        </div>
-        <div
-          className={togglerClass}
-          onClick={() => {
-            this.setState({ show: !this.state.show });
-          }}
+        <img alt="" src={logo} className="logo-gl" />
+        <CSSTransition
+          in={this.state.show}
+          timeout={2000}
+          classNames="alert"
         >
-          {Icon}
+          <div className={info}>
+            <div className="internal">
+              <div className="internal-2">
+              <SceneButtons
+                className="sceneButtonsContainer"
+                showFirstImg={this.props.showFirstImg}
+                showSecondImg={this.props.showSceondImg}
+                showThirdImg={this.props.showThirdImg}
+                showFourthImg={this.props.showFourthImg}
+                showFifthImg={this.props.showFifthImg}
+              />
+              <div className="patchContainer">
+                <img alt="" src={PATCH} className="patch" />
+              </div>
+              <img
+                src={imgArrow}
+                className="sidePanelToggler"
+                onClick={() => {
+                  this.setState({ show: !this.state.show });
+                }}
+              />
+              </div>
+            </div>
+            <div className="sidePanel">
+              <img src={Gradient} className="gradient" />
+              <div className="tagContainer">
+                <div className="tag">
+                  <p>OMEN 27i Gaming Monitor</p>
+                </div>
+                <img alt="" src={logo} className="logo" />
+              </div>
+              <Explore
+                slide={this.props.slide}
+                showPorts={this.props.showPorts}
+                tilt={this.props.tilt}
+                showList={this.state.ExploreListShow}
+                toggleList={() => {
+                  this.setState({
+                    ExploreListShow: !this.state.ExploreListShow,
+                  });
+                }}
+              />
+              <Features
+                showGsyncTech={this.props.showGsyncTech}
+                exploreOpen={this.state.ExploreListShow}
+              />
+            </div>
+          </div>
+        </CSSTransition>
+        <div className="share-div">
+          <img src={reSet} className="share" />
+          <img src={shareImg} className="share" />
+          <img src={reSize} className="share" />
         </div>
-        <SceneButtons
-          className ={sceneClass}
-          showFirstImg={this.props.showFirstImg}
-          showSecondImg={this.props.showSceondImg}
-          showThirdImg={this.props.showThirdImg}
-          showFourthImg={this.props.showFourthImg}
-          showFifthImg={this.props.showFifthImg}
-        />
+      </Aux>
+    );
+  };
+  render() {
+    let mobileView = this.createMobileView();
+    console.log("mob:" + this.state.mobileView);
+    let Icon = <ArrowBackIosIcon className="arrow" />;
+    if (!this.state.show) {
+      Icon = <ArrowForwardIosIcon className="arrow" />;
+    }
+    let togglerClass = "sidePanelToggler";
+    let sceneClass = "sceneButtonsContainer";
+    let imgArrow = rightImg;
+    if (!this.state.show) {
+      togglerClass = togglerClass + " togglerLeft";
+      sceneClass = "sceneButtons-difn-pos";
+      imgArrow = leftImg;
+    }
+
+    return this.state.mobileView ? (
+      mobileView
+    ) : (
+      <Aux>
+        <img alt="" src={logo} className="logo-gl" />
+        <CSSTransition
+          in={this.state.show}
+          timeout={2000}
+          classNames="alert"
+          unmountOnExit
+        >
+          <Aux>
+            <div className="tagContainer">
+              <div className="tag">
+                <p>OMEN 27i Gaming Monitor</p>
+              </div>
+              <img alt="" src={logo} className="logo" />
+            </div>
+          </Aux>
+        </CSSTransition>
+
+        <CSSTransition
+          in={this.state.show}
+          timeout={2000}
+          classNames="alert"
+          unmountOnExit
+        >
+          <div className="sidePanel">
+            <img src={Gradient} className="gradient" />
+            <Explore
+              slide={this.props.slide}
+              showPorts={this.props.showPorts}
+              tilt={this.props.tilt}
+              showList={this.state.ExploreListShow}
+              toggleList={() => {
+                this.setState({ ExploreListShow: !this.state.ExploreListShow });
+              }}
+            />
+            <Features
+              showGsyncTech={this.props.showGsyncTech}
+              exploreOpen={this.state.ExploreListShow}
+            />
+          </div>
+        </CSSTransition>
+
+        <CSSTransition in={this.state.show} timeout={2000} classNames="toggler">
+          <img
+            src={imgArrow}
+            className={togglerClass}
+            onClick={() => {
+              this.setState({ show: !this.state.show });
+            }}
+          />
+        </CSSTransition>
+        <CSSTransition
+          in={this.state.show}
+          timeout={2000}
+          classNames="sceneButtons"
+        >
+          <SceneButtons
+            className={sceneClass}
+            showFirstImg={this.props.showFirstImg}
+            showSecondImg={this.props.showSceondImg}
+            showThirdImg={this.props.showThirdImg}
+            showFourthImg={this.props.showFourthImg}
+            showFifthImg={this.props.showFifthImg}
+          />
+        </CSSTransition>
+        <div className="share-div">
+          <img src={reSet} className="share" />
+          <img src={shareImg} className="share" />
+          <img src={reSize} className="share" />
+        </div>
       </Aux>
     );
   }

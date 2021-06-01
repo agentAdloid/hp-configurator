@@ -2,30 +2,33 @@
 @media screen and (min-width: 700px) {
     .exploreContainer{
         align-items: center;
-        margin-top: 10%;
+        margin-top:20px;
     }
     .exploreTag{
         width: 95%;
         align-items: center;
         position: relative;
         text-align: center;
-        border: 1px solid rgb(128, 126, 126);
+        border: 1px solid rgb(165, 162, 162);
         cursor: pointer;
         margin: 0 auto;
         box-sizing: border-box;
     }
     
     .exploreTag p{
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
+        padding: 9px;    
+        font-weight: 400;
+        color: #4B4D4A;
     }
     .plusIcon{
-        color: rgb(128, 126, 126);
+        color: rgb(141, 137, 137);
         position: absolute;
-        left: 5px;
-        top: 5px;
+        transform: scale(.8);
     }
     .minusIcon{
-        color: rgb(128, 126, 126);
+        color: rgb(182, 181, 181);
         margin-left: 2%;
     }
     .exploreList{
@@ -44,8 +47,7 @@
     .exploreContainer{
         align-items: center;
         z-index: 10;
-        margin-top: 10%;
-        max-height: 23vh;
+        margin-top: 2%;
         flex-direction: column;
         overflow-y: scroll;
     }
@@ -80,11 +82,15 @@
         justify-content: space-evenly;
         max-width: 400px;
         display: flex;
+        max-height: 100px;
         cursor: pointer;
+        margin-left: 10%;
         flex-direction: column;
-        margin-top: 2%;
     }
     .listsTagExplore{
-        margin: 1%;
+        margin-top: 10px;
+        align-items: center;
+        height: 20px;
+        position: relative;
     }    
 }

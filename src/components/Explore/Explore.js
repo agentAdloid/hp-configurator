@@ -1,16 +1,15 @@
 import React,{useState} from 'react';
 import "./Explore.css";
 import AddIcon from '@material-ui/icons/Add';
-import RemoveIcon from '@material-ui/icons/Remove'
+import RemoveIcon from '@material-ui/icons/Remove';
 const Features = (props) =>{
-    const [listShow, setlistShow] = useState(false);
     let Icon;
-    if(listShow===false)
-    {   Icon = (<AddIcon size="large" className="plusIcon" fontSize="large"/>
+    if(props.showList===false)
+    {   Icon = (<AddIcon size="Small" className="plusIcon" fontSize="large"/>
         );
     }
     else
-        Icon=(  <RemoveIcon size="large" className="plusIcon" fontSize="large"/>
+        Icon=(  <RemoveIcon size="Small" className="plusIcon" fontSize="large"/>
         );
     let Featurelist =(
         <div className="exploreList">
@@ -25,14 +24,12 @@ const Features = (props) =>{
                 </div>
             </div>
     ) ;
-    if(listShow===false)
+    if(props.showList===false)
     {   Featurelist = null;
     }
     return(
         <div className="exploreContainer" >
-            <div className="exploreTag" onClick={()=>{
-            setlistShow(!listShow);
-        }}>     
+            <div className="exploreTag" onClick={props.toggleList}>     
                 <div className="iconDiv">
                   {Icon}
                 </div>

@@ -6,6 +6,7 @@ class SceneButton extends React.Component {
     selected: 0
   }
   render() {
+    console.log(window.innerWidth);
     let cl = ["", "", "", "", "", ""];
     switch (this.state.selected) {
       case 1:
@@ -28,6 +29,7 @@ class SceneButton extends React.Component {
     }
     return (
       <div className={this.props.className}>
+      <div className="sceneButtons">
         <div
           className={"circleButton" + cl[1]}
           onClick={() => {
@@ -63,6 +65,7 @@ class SceneButton extends React.Component {
             this.props.showFifthImg();
           }}
         ></div>
+      </div>
       </div>
     );
   }
