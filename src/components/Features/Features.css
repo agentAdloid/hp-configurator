@@ -158,7 +158,11 @@
         box-sizing: border-box;
     }
     .featuresTag p{
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
+        padding: 9px;    
+        font-weight: 400;
+        color: #323331;
     }
     .featuresList{
         justify-content: space-around;
