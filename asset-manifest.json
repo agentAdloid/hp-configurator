@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/hp-configurator/static/css/main.53e0c33f.chunk.css",
-    "main.js": "/hp-configurator/static/js/main.90569c40.chunk.js",
-    "main.js.map": "/hp-configurator/static/js/main.90569c40.chunk.js.map",
+    "main.css": "/hp-configurator/static/css/main.e5a822ea.chunk.css",
+    "main.js": "/hp-configurator/static/js/main.46324a99.chunk.js",
+    "main.js.map": "/hp-configurator/static/js/main.46324a99.chunk.js.map",
     "runtime-main.js": "/hp-configurator/static/js/runtime-main.71833ec2.js",
     "runtime-main.js.map": "/hp-configurator/static/js/runtime-main.71833ec2.js.map",
     "static/js/2.1cd8c43f.chunk.js": "/hp-configurator/static/js/2.1cd8c43f.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.aa5b14ad.chunk.js": "/hp-configurator/static/js/3.aa5b14ad.chunk.js",
     "static/js/3.aa5b14ad.chunk.js.map": "/hp-configurator/static/js/3.aa5b14ad.chunk.js.map",
     "index.html": "/hp-configurator/index.html",
-    "static/css/main.53e0c33f.chunk.css.map": "/hp-configurator/static/css/main.53e0c33f.chunk.css.map",
+    "static/css/main.e5a822ea.chunk.css.map": "/hp-configurator/static/css/main.e5a822ea.chunk.css.map",
     "static/js/2.1cd8c43f.chunk.js.LICENSE.txt": "/hp-configurator/static/js/2.1cd8c43f.chunk.js.LICENSE.txt",
     "static/media/EXTED_PATCH_0.92e61e9d.png": "/hp-configurator/static/media/EXTED_PATCH_0.92e61e9d.png",
     "static/media/EXTED_PATCH_01.8c825fab.png": "/hp-configurator/static/media/EXTED_PATCH_01.8c825fab.png",
@@ -29,7 +29,7 @@
   "entrypoints": [
     "static/js/runtime-main.71833ec2.js",
     "static/js/2.1cd8c43f.chunk.js",
-    "static/css/main.53e0c33f.chunk.css",
-    "static/js/main.90569c40.chunk.js"
+    "static/css/main.e5a822ea.chunk.css",
+    "static/js/main.46324a99.chunk.js"
   ]
 }
