@@ -5,7 +5,7 @@ import RemoveIcon from '@material-ui/icons/Remove';
 import tiltImg from "../../assets/tilt.svg";
 import slideImg from "../../assets/slide.svg";
 import portsImg from "../../assets/Zoom.png";
-
+import Aux from "../../hoc/Aux";
 
 const race = [['Slide',slideImg],['Tilt',tiltImg],['Ports',portsImg]];
 
@@ -20,8 +20,8 @@ class Dropdown extends React.Component {
     return (
       <div
         className={isOpen ? "exploreContainer active" : "exploreContainer"}
-        onClick={this.props.toggleList} >
-        <div className="exploreTag">
+       >
+        <div className="exploreTag"  onClick={this.props.toggleList} >
             {icon}
             <p>Explore</p>
         </div>
@@ -31,14 +31,28 @@ class Dropdown extends React.Component {
   }
 
   itemList = props => {
-    const list = props.map((item) => (
+    const list = (
+      <Aux>
       <div
         className="dropdown__item"
-        key={item[0]}>
-        <img src={item[1]} />
-        <p>{item[0]}</p>
+        key={race[0][0]}>
+        <img src={race[0][1]} />
+        <p onClick={this.props.slide}>{race[0][0]}</p>
       </div>
-    ));
+      <div
+        className="dropdown__item"
+        key={race[1][0]}>
+        <img src={race[1][1]} />
+        <p onClick={this.props.tilt}>{race[1][0]}</p>
+      </div>
+      <div
+        className="dropdown__item"
+        key={race[2][0]}>
+        <img src={race[2][1]} />
+        <p onClick={this.props.showPorts}>{race[2][0]}</p>
+      </div>
+      </Aux>
+    );
 
     return (
       <div className="dropdown__items"> { list } </div>

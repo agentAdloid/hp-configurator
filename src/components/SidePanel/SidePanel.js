@@ -17,12 +17,14 @@ import logo from "../../assets/logo.svg";
 import PATCH from "../../assets/PATCH.svg";
 import downArrow from "../../assets/downarrow.svg";
 import upArrow from "../../assets/uparrow.svg";
+import SocialShare from "../../components/SocialShare/SocialShare";
 class SidePanel extends React.Component {
   state = {
     show: true,
     ExploreListShow: false,
     FeatureListShow: false,
     mobileView: false,
+    showSocialShare: false
   };
   constructor(props) {
     super(props);
@@ -105,10 +107,20 @@ class SidePanel extends React.Component {
           </div>
         </CSSTransition>
         <div className="share-div">
-          <img src={reSet} className="share" />
-          <img src={shareImg} className="share" />
-          <img src={reSize} className="share" />
+          <a href="https://www.adloid.io/"><img src={reSet} className="share" /></a>
+          <img src={shareImg} className="share"  onClick={()=>{this.setState({showSocialShare:!this.state.showSocialShare})}}/>
+          <img src={reSize} className="share" onClick={()=>{this.setState({show:!this.state.show})}}/>
         </div>
+        <CSSTransition
+          in={this.state.showSocialShare}
+          timeout={2000}
+          classNames="socialShare"
+          unmountOnExit
+        >
+        <div className="socialShare">
+            <SocialShare url="https://content.hmxmedia.com/OQDF3YHDS/index.html" title="Hp OMEN"/>
+        </div>
+        </CSSTransition>
       </Aux>
     );
   };
@@ -207,10 +219,20 @@ class SidePanel extends React.Component {
           />
         </CSSTransition>
         <div className="share-div">
-          <img src={reSet} className="share" />
-          <img src={shareImg} className="share" />
-          <img src={reSize} className="share" />
+          <a href="https://www.adloid.io/"><img src={reSet} className="share" /></a>
+          <img src={shareImg} className="share"  onClick={()=>{this.setState({showSocialShare:!this.state.showSocialShare})}}/>
+          <img src={reSize} className="share" onClick={()=>{this.setState({show:!this.state.show})}}/>
         </div>
+        <CSSTransition
+          in={this.state.showSocialShare}
+          timeout={2000}
+          classNames="socialShare"
+          unmountOnExit
+        >
+        <div className="socialShare">
+            <SocialShare url="https://content.hmxmedia.com/OQDF3YHDS/index.html" title="Hp OMEN"/>
+        </div>
+        </CSSTransition>
       </Aux>
     );
   }

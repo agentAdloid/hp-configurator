@@ -1,0 +1,57 @@
+.Demo_contanier{
+  position: absolute;
+  flex-direction: row;
+}
+.Demo__some-network {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.Demo__some-network__share-count {
+  display: inline-flex;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: visible;
+  width: 0;
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+.Demo__some-network__share-button {
+  cursor: pointer;
+}
+
+.Demo__some-network__share-button:hover:not(:active) {
+  opacity: 0.75;
+}
+
+.Demo__some-network__custom-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.socialShare{
+  position: absolute;
+  top:10vh;
+  right: 3vh;
+}
+.socialShare-enter {
+  opacity: 1;
+  transform: translateX(200px);
+}
+.socialShare-enter-active {
+  opacity: 1;
+  transform: translateX(0vh);
+  transition: transform 1150ms ease-in-out;
+}
+.socialShare-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.socialShare-exit-active {
+  opacity: 1;
+  transform: translateX(200px);
+  transition: transform 900ms ease-in-out;
+}

@@ -33,7 +33,7 @@ class Dropdown extends React.Component {
     }
     return (
       <div className={isOpen ? "exploreContainer active" : "exploreContainer"}>
-        <div className="exploreTag" onClick={this.props.toggleList}>
+        <div className="exploreTag" onClick={()=>{this.props.toggleList();}}>
           {icon}
           <p>Feature</p>
         </div>
@@ -62,6 +62,7 @@ class Dropdown extends React.Component {
           <p
             onClick={() => {
               this.setState({ isOpen: !this.state.isOpen });
+              this.props.showGsyncTech();
             }}
           >
             {race[0]}
