@@ -4,31 +4,31 @@ class SceneComponent extends React.Component {
 
   //alter these functions to show 3d animations
   slide = () => {
-    alert("sliding");
+    console.log("sliding");
   };
   tilt = () => {
-    alert("tilting");
+    console.log("tilting");
   };
   showPorts = () => {
-    alert("showing Ports");
+    console.log("showing Ports");
   };
   showGsyncTech = () => {
-    alert("showing Gsync Tech");
+    console.log("showing Gsync Tech");
   };
   showFirstImg = () => {
-    alert("Showing first img");
+    console.log("Showing first img");
   };
   showSceondImg = () => {
-    alert("Showing sec img");
+    console.log("Showing sec img");
   };
   showThirdImg = () => {
-    alert("Showing third img");
+    console.log("Showing third img");
   };
   showFourthImg = () => {
-    alert("Showing fourth img");
+    console.log("Showing fourth img");
   };
   showFifthImg = () => {
-    alert("Showing fifth img");
+    console.log("Showing fifth img");
   };
   render() {
     return (
