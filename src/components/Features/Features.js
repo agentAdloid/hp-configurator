@@ -58,7 +58,10 @@ class Dropdown extends React.Component {
     const list = (
       <Aux>
         <div className="dropdown__item_features" key={race[0]}>
-          <img src={circleImg} />
+          <img src={circleImg} onClick={() => {
+              this.setState({ isOpen: !this.state.isOpen });
+              this.props.showGsyncTech();
+            }}/>
           <p
             onClick={() => {
               this.setState({ isOpen: !this.state.isOpen });

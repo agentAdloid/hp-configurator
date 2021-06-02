@@ -218,7 +218,7 @@
         height: auto;
         display: flex;
         overflow-y: scroll;
-        max-height: 10vh;
+        max-height: 15vh;
         transition: max-height 0.7s ease;
       }
       .opensubFeature::-webkit-scrollbar { width: 0 !important }
