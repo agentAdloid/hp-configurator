@@ -78,14 +78,17 @@
     .minusIcon {
         position: absolute;
         color: black;
+        left: 12px;
         top: 50px;
+        margin-left: 2%;
         background: rgb(252, 248, 248);
         border-radius: 50px;
-        transform: scale(1);
+        transform: scale(1.2);
       }
       .dropdown__items_features {
         position: relative;
         visibility: visible;
+        margin-top: 20px;
         opacity: 0.9;
         flex-wrap: wrap;
         max-height: 0px;
@@ -109,18 +112,17 @@
       }
       .dropdown__item_features img {
         position: absolute;
-        left: 12px;
-        padding: 13px 0;
-        width: 25px;
-        height: 25px;
+        left: 15px;
+        padding: 10px 0;
+        width: 30px;
+        height: 30px;
       }
       .dropdown__item_features:not(:last-child) {
         border-bottom: 1px solid #dcdcdc;
       }
       .dropdown__item_features p {
-        padding: 5px 0 5px 0;
+        padding: 0 30px;
         cursor: pointer;
-        font-size: 14px;
         color: rgb(9, 15, 19);
       }
       .dropdown__item_features p:hover {
@@ -143,7 +145,6 @@
           font-size: 13px;
           font-family: Georgia, 'Times New Roman', Times, serif;
           line-height: 25px;
-          padding: 0 5px;
       }
       .subFeatureContainer p:hover{
         color: #323331;
@@ -151,56 +152,82 @@
 }
 
 @media screen and (max-width: 699px) {
-  .featuresContainer {
-    align-items: center;
-    z-index: 10;
-    margin-top: 1%;
-    overflow-y: scroll;
-  }
-  .featuresTag {
-    width: 90vw;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    border: 1px solid rgb(128, 126, 126);
-    cursor: pointer;
-    box-sizing: border-box;
-  }
-  .featuresTag p {
-    font-size: 15px;
-    margin: 0;
-    padding: 9px;
-    font-weight: 400;
-    color: #323331;
-  }
-  .featuresList {
-    justify-content: space-around;
-    width: 100%;
-    max-height: 100px;
-    display: flex;
-    cursor: pointer;
-    flex-direction: column;
-    margin-top: 1%;
-    padding-bottom: 30px;
-  }
-  .listsTag {
-    margin-top: 10px;
-    align-items: center;
-    height: 20px;
-    position: relative;
-  }
-  .listsTag p {
-    margin-left: 10px;
-  }
-  .minus {
-    position: absolute;
-    top: 13px;
-    left: 20px;
-    color: rgb(128, 126, 126);
-  }
-  .iconDiv {
-    position: absolute;
-    top: 0px;
-    left: 10px;
-  }
+    .minusIcon {
+        position: absolute;
+        color: black;
+        left: 12px;
+        top: 50px;
+        margin-left: 2%;
+        background: rgb(252, 248, 248);
+        border-radius: 50px;
+        transform: scale(1.2);
+      }
+      .dropdown__items_features {
+        position: relative;
+        visibility: visible;
+        margin-top: 0px;
+        opacity: 0.9;
+        flex-wrap: wrap;
+        max-height: 0px;
+        transition: max-height 0.7s ease, opactiy 0s;
+      }
+    
+      .active .dropdown__items_features {
+        visibility: visible;
+        margin: 0px 0;
+        height: auto;
+        max-height: 400px;
+        transition: max-height 0.7s ease;
+      }
+      .dropdown__item_features {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        border: 1px solid #dcdcdc;
+        overflow: hidden;
+        background: #dcdcdc;
+      }
+      .dropdown__item_features img {
+        position: absolute;
+        left: 15px;
+        padding: 10px 0;
+        width: 30px;
+        height: 30px;
+      }
+      .dropdown__item_features:not(:last-child) {
+        border-bottom: 1px solid #dcdcdc;
+      }
+      .dropdown__item_features p {
+        padding: 0 30px;
+        cursor: pointer;
+        color: rgb(9, 15, 19);
+      }
+      .dropdown__item_features p:hover {
+        color: white;
+        background: #dcdcdc;
+      }
+      .subFeatureContainer {
+        display: flex;
+        overflow: hidden;
+        opacity: 0.9;
+        flex-wrap: wrap;
+        max-height: 0px;
+        transition: max-height 0.7s ease, opactiy 0s;
+      }
+      .opensubFeature{
+        height: auto;
+        display: flex;
+        overflow-y: scroll;
+        max-height: 10vh;
+        transition: max-height 0.7s ease;
+      }
+      .opensubFeature::-webkit-scrollbar { width: 0 !important }
+      .subFeatureContainer p{
+          font-size: 13px;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          line-height: 25px;
+      }
+      .subFeatureContainer p:hover{
+        color: #323331;
+    }
 }

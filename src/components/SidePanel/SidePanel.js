@@ -55,25 +55,17 @@ class SidePanel extends React.Component {
     return (
       <Aux>
         <img alt="" src={logo} className="logo-gl" />
-        <CSSTransition
-          in={this.state.show}
-          timeout={2000}
-          classNames="alert"
-        >
+        <CSSTransition in={this.state.show} timeout={2000} classNames="alert">
           <div className={info}>
             <div className="internal">
-              <div className="internal-2">
               <SceneButtons
-                className="sceneButtonsContainer"
+                className="sceneButtons"
                 showFirstImg={this.props.showFirstImg}
                 showSecondImg={this.props.showSceondImg}
                 showThirdImg={this.props.showThirdImg}
                 showFourthImg={this.props.showFourthImg}
                 showFifthImg={this.props.showFifthImg}
               />
-              <div className="patchContainer">
-                <img alt="" src={PATCH} className="patch" />
-              </div>
               <img
                 src={imgArrow}
                 className="sidePanelToggler"
@@ -81,16 +73,11 @@ class SidePanel extends React.Component {
                   this.setState({ show: !this.state.show });
                 }}
               />
-              </div>
             </div>
             <div className="sidePanel">
+              <p className="tag-p">OMEN 27i Gaming Monitor</p>
+
               <img src={Gradient} className="gradient" />
-              <div className="tagContainer">
-                <div className="tag">
-                  <p>OMEN 27i Gaming Monitor</p>
-                </div>
-                <img alt="" src={logo} className="logo" />
-              </div>
               <Explore
                 slide={this.props.slide}
                 showPorts={this.props.showPorts}
@@ -99,13 +86,21 @@ class SidePanel extends React.Component {
                 toggleList={() => {
                   this.setState({
                     ExploreListShow: !this.state.ExploreListShow,
+                    FeatureListShow: false,
                   });
                 }}
               />
-              {/* <Features
+              <Features
                 showGsyncTech={this.props.showGsyncTech}
                 exploreOpen={this.state.ExploreListShow}
-              /> */}
+                showList={this.state.FeatureListShow}
+                toggleList={() => {
+                  this.setState({
+                    FeatureListShow: !this.state.FeatureListShow,
+                    ExploreListShow: false,
+                  });
+                }}
+              />
             </div>
           </div>
         </CSSTransition>
@@ -168,17 +163,22 @@ class SidePanel extends React.Component {
               tilt={this.props.tilt}
               showList={this.state.ExploreListShow}
               toggleList={() => {
-                this.setState({ ExploreListShow: !this.state.ExploreListShow,FeatureListShow:false });
+                this.setState({
+                  ExploreListShow: !this.state.ExploreListShow,
+                  FeatureListShow: false,
+                });
               }}
             />
             <Features
               showGsyncTech={this.props.showGsyncTech}
               exploreOpen={this.state.ExploreListShow}
-              showList = {this.state.FeatureListShow}
-              toggleList={()=>{
-                this.setState({FeatureListShow: !this.state.FeatureListShow,ExploreListShow:false});
-              }
-              }
+              showList={this.state.FeatureListShow}
+              toggleList={() => {
+                this.setState({
+                  FeatureListShow: !this.state.FeatureListShow,
+                  ExploreListShow: false,
+                });
+              }}
             />
           </div>
         </CSSTransition>

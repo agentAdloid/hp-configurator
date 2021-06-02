@@ -81,7 +81,7 @@
     width: 33vw;
     display: block;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     background: #dcdcdc;
   }
   .tag {
@@ -268,10 +268,8 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    position: absolute;
     opacity: 1;
-    bottom: 0vh;
-    height: 40vh;
+    max-height: 50vh;
     z-index: 1;
     width: 100%;
     background: #dcdcdc;
@@ -282,11 +280,8 @@
     text-align: center;
     display: block;
     overflow: hidden;
-    position: absolute;
-    top: -3%;
-    left: 0;
+    position: relative;
     opacity: 1;
-    height: 40px;
     z-index: 2;
     width: 100%;
     background: #dcdcdc;
@@ -295,28 +290,19 @@
     height: 0%;
     opacity: 0;
   }
-  .tag img {
-    width: 40px;
-    position: absolute;
-    height: 40px;
-    border-radius: 40px;
-    top: 5px;
-    left: 5px;
-  }
-  .tag p {
+  .tag-p {
     font-family: "HpSimplified";
-    font-size: 19px;
+    font-size: 18px;
+    line-height: 5vh;
     font-weight: 700;
   }
   .sidePanelToggler {
-    position: absolute;
-    bottom: 40%;
     align-items: center;
     justify-content: center;
     border-radius: 30% 30% 10% 0%;
     width: 40px;
-    right: 3%;
     height: 40px;
+    padding: auto 0;
     cursor: pointer;
     z-index: 10;
   }
@@ -371,7 +357,7 @@
   }
   .alert-enter {
     opacity: 1;
-    transform: translateY(41vh);
+    transform: translateY(40vh);
   }
   .alert-enter-active {
     opacity: 1;
@@ -380,7 +366,7 @@
   }
   .alert-exit {
     opacity: 1;
-    transform: translateY(-41vh);
+    transform: translateY(-40vh);
   }
   .alert-exit-active {
     opacity: 1;
@@ -407,23 +393,24 @@
   }
   .info-div{
       position: absolute;
-      bottom: 0vw;
+      bottom: 0vh;
       left: 0vw;
       width: 100%;
-      height: 50vh;
+      height: 55vh;
       background: #dcdcdc;
   }
   .info-div-low{
     position: absolute;
-    bottom: -41vh;
+    bottom: -40vh;
     left: 0vw;
     width: 100%;
-    height: 50vh;
+    height: 55vh;
+    background: #dcdcdc;
   }
   .internal{
-      position: relative;
-  }
-  .internal2{
-      position: absolute;
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+     background: white;
   }
 }

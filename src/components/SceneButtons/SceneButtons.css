@@ -22,15 +22,15 @@
     z-index: 1;
   }
   .circleButtonSelected {
-    height: 22px;
-    width: 22px;
+    height: 12px;
+    width: 12px;
     background: #757373;
     border-radius: 30px;
   }
   .circleButton {
-    height: 20px;
+    height: 10px;
     cursor: pointer;
-    width: 20px;
+    width: 10px;
     border: 1px solid #757373;
     border-radius: 200px;
   }
@@ -70,27 +70,25 @@
       align-items: center;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       opacity: 1;
-      position: absolute;
-      top: 30%;
-      left: 5%;
-      width: 70%;
+      width: 90%;
       height: 30px;
       z-index: 1;
     }
     .circleButtonSelected {
-      height: 20px;
-      width: 20px;
-      background: #5a5959;
+      height: 12px;
+      width: 12px;
+      background: rgb(51, 50, 50);
+      border: 1px solid rgb(51, 50, 50);
       border-radius: 30px;
     }
     .circleButton {
-      height: 18px;
+      height: 10px;
       cursor: pointer;
-      width: 18px;
-      border: 1px solid white;
-      background: white;
+      width: 10px;
+      border: 1px solid #dcdcdc;
+      background: #dcdcdc;
       border-radius: 200px;
     }
     .sceneButtons-difn-pos{
