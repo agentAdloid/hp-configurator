@@ -8,7 +8,12 @@ import portsImg from "../../assets/Zoom.png";
 
 
 const race = [['Slide',slideImg],['Tilt',tiltImg],['Ports',portsImg]];
-
+const para = "Get in the game with the latest NVIDIA® G-SYNC® Compatible displays."+
++"Each displays is validated by NVIDIA to bring you smooth," 
++"variable refresh rate (VRR) gaming experience that eliminates" 
++"tearing, stuttering, artifacts, and flicker at refresh rate up" 
++"to 165Hz. So you get the competitive edge you need, backed by"
++"performance you can trust.";
 class Dropdown extends React.Component {
 
   render() {
@@ -31,12 +36,13 @@ class Dropdown extends React.Component {
   }
 
   itemList = props => {
-    const list = props.map((item) => (
+    const list =(
       <div
         className="dropdown__item"
-        key={item[0]}>
-        <img src={item[1]} />
+        key={race[0][0]}>
+        <img src={race[1]} />
         <p>{item[0]}</p>
+        <p>{para}</p>
       </div>
     ));
 

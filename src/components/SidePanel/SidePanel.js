@@ -21,6 +21,7 @@ class SidePanel extends React.Component {
   state = {
     show: true,
     ExploreListShow: false,
+    FeatureListShow: false,
     mobileView: false,
   };
   constructor(props) {
@@ -33,7 +34,6 @@ class SidePanel extends React.Component {
       else this.setState({ mobileView: false });
     });
   }
-  onShareClick
   createMobileView = () => {
     let Icon = <ArrowBackIosIcon className="arrow" />;
     if (!this.state.show) {
@@ -102,10 +102,10 @@ class SidePanel extends React.Component {
                   });
                 }}
               />
-              <Features
+              {/* <Features
                 showGsyncTech={this.props.showGsyncTech}
                 exploreOpen={this.state.ExploreListShow}
-              />
+              /> */}
             </div>
           </div>
         </CSSTransition>
@@ -168,12 +168,17 @@ class SidePanel extends React.Component {
               tilt={this.props.tilt}
               showList={this.state.ExploreListShow}
               toggleList={() => {
-                this.setState({ ExploreListShow: !this.state.ExploreListShow });
+                this.setState({ ExploreListShow: !this.state.ExploreListShow,FeatureListShow:false });
               }}
             />
             <Features
               showGsyncTech={this.props.showGsyncTech}
               exploreOpen={this.state.ExploreListShow}
+              showList = {this.state.FeatureListShow}
+              toggleList={()=>{
+                this.setState({FeatureListShow: !this.state.FeatureListShow,ExploreListShow:false});
+              }
+              }
             />
           </div>
         </CSSTransition>
