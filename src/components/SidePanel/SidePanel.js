@@ -18,6 +18,7 @@ import PATCH from "../../assets/PATCH.svg";
 import downArrow from "../../assets/downarrow.svg";
 import upArrow from "../../assets/uparrow.svg";
 import SocialShare from "../../components/SocialShare/SocialShare";
+import Scroller from "../../components/Scroller/Scroller";
 class SidePanel extends React.Component {
   state = {
     show: true,
@@ -80,6 +81,7 @@ class SidePanel extends React.Component {
               <p className="tag-p">OMEN 27i Gaming Monitor</p>
 
               <img src={Gradient} className="gradient" />
+              <Scroller>
               <Explore
                 slide={this.props.slide}
                 showPorts={this.props.showPorts}
@@ -103,6 +105,7 @@ class SidePanel extends React.Component {
                   });
                 }}
               />
+              </Scroller>
             </div>
           </div>
         </CSSTransition>
@@ -169,6 +172,7 @@ class SidePanel extends React.Component {
         >
           <div className="sidePanel">
             <img src={Gradient} className="gradient" />
+            <Scroller>
             <Explore
               slide={this.props.slide}
               showPorts={this.props.showPorts}
@@ -192,6 +196,7 @@ class SidePanel extends React.Component {
                 });
               }}
             />
+            </Scroller>
           </div>
         </CSSTransition>
 

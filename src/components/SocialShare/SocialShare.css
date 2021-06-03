@@ -31,12 +31,20 @@
   width: 32px;
   height: 32px;
 }
-
+@media screen and (min-height: 500px){     
 .socialShare{
   position: absolute;
   top:10vh;
   right: 3vh;
 }
+}
+@media screen and (max-height: 499px){     
+  .socialShare{
+    position: absolute;
+    top:20vh;
+    right: 3vh;
+  }
+  }
 .socialShare-enter {
   opacity: 1;
   transform: translateX(200px);
